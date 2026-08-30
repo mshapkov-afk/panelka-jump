@@ -104,8 +104,8 @@
         <h2>1. Account Registration & User Data (Optional)</h2>
         <p>Panelka Jump can be played as a standalone game without creating an account. Account creation and sign-in are entirely <strong>optional</strong> and provided via <strong>GDevelop Services</strong> (including Google Sign-In, Apple Sign-In, or Email authentication) for players who wish to sync their progress across devices.</p>
         <ul>
-            <li><strong>Optional Account Data:</strong> If you choose to register or sign in, basic authentication tokens, user IDs, or email addresses associated with your account are processed to maintain your account profile.</li>
-            <li><strong>Cloud Save & Storage:</strong> For registered users, game progress and achievements are securely synced and stored in the cloud using <strong>JSONBin.io</strong>. For guest players, progress is saved locally on the device.</li>
+            <li><strong>Authentication & Profile:</strong> When you register via GDevelop Services, an authentication token and associated user account are generated and linked with <strong>Firebase Authentication</strong> to secure your identity.</li>
+            <li><strong>Cloud Save & Storage:</strong> For registered users, game progress, stats, and achievements are securely stored and synced in the cloud using <strong>Google Cloud / Firebase Firestore</strong>. For guest players, progress is saved locally on the device.</li>
         </ul>
 
         <h2>2. Data Collected Automatically & Third-Party Services</h2>
@@ -117,9 +117,10 @@
 
         <p>The third-party service providers utilized by the Application include:</p>
         <ul>
+            <li><strong>GDevelop Services:</strong> Used to handle player account creation, login authentication, and player profile sessions. (<a href="https://gdevelop.io/privacy-policy" target="_blank">GDevelop Privacy Policy</a>)</li>
+            <li><strong>Google Firebase & Firestore:</strong> Used for secure user authentication management and backend cloud database storage (Firestore) for save files and game progress. (<a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>)</li>
             <li><strong>AdMob (Google):</strong> Used for delivering in-game advertisements. (<a href="https://policies.google.com/technologies/ads" target="_blank">Google AdMob Policy</a>)</li>
             <li><strong>Google Play Services:</strong> Used for achievements, leaderboards, and store services. (<a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>)</li>
-            <li><strong>JSONBin.io:</strong> Used as a secure cloud database for storing optional user save data.</li>
         </ul>
 
         <h2>3. Application Permissions</h2>
@@ -131,7 +132,7 @@
         <h2>5. Data Safety & Data Deletion Rights</h2>
         <div class="callout">
             <div class="callout-title">User Rights & Account/Data Deletion</div>
-            <p style="margin: 0;">In compliance with Google Play Developer Policies, all players who choose to create an account have the right to request the deletion of their account and associated cloud data stored in JSONBin. If you wish to permanently delete your registered account and cloud-saved progress, please send a deletion request to <a href="mailto:panelkajump@gmail.com">panelkajump@gmail.com</a> with your registered email details.</p>
+            <p style="margin: 0;">In compliance with Google Play Developer Policies, all players who choose to create an account have the right to request the deletion of their account and associated cloud data stored in Firebase/Firestore. If you wish to permanently delete your registered account token and cloud-saved progress, please send a deletion request to <a href="mailto:panelkajump@gmail.com">panelkajump@gmail.com</a> with your registered email details.</p>
         </div>
 
         <h2>6. Security</h2>
